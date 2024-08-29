@@ -84,6 +84,7 @@ module axis_arbiter_tb();
    repeat(5) @(posedge axis_clk);
    
    resetn = 1'b1;
+      // for slave axis_1
    for ( i = 0; i<5 ; i= i+1) begin
     @(posedge axis_clk);
     s_axis_tvalid1 = 1'b1;
@@ -106,7 +107,9 @@ module axis_arbiter_tb();
    s_axis_tlast1 = 1'b0;
    s_axis_tvalid1 = 1'b0;
    @(posedge axis_clk);
-   
+
+
+      // for slave_axis_2//
    for (i = 0; i<5 ; i= i+1) 
    begin
     @(posedge axis_clk);
