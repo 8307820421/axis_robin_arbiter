@@ -59,8 +59,8 @@ module axis_arbiter(
     assign s_axis_tready2 = 1'b1;
     
     localparam idle = 2'b00;
-    localparam  s1 = 2'b00;  // store or tx state
-    localparam s2 = 2'b00;  // finish state
+    localparam  s1 = 2'b01;  // store or tx state
+    localparam s2 = 2'b10;  // finish state
     reg [1:0] state =idle , next_state = idle;
     
     // always block for reset
